@@ -4,18 +4,19 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
-public:
+   public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
+   private slots:
     void on_buttonZero_clicked();
 
     void on_buttonRightBracket_clicked();
@@ -58,7 +59,13 @@ private slots:
 
     void on_buttonLeftBracket_clicked();
 
-private:
+    void on_actionAbout_triggered();
+
+    void on_actionDark_triggered();
+
+    void on_actionBlue_triggered();
+
+   private:
     Ui::MainWindow *ui;
 };
-#endif // MAINWINDOW_H
+#endif  // MAINWINDOW_H

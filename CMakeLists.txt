@@ -1,33 +1,13 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Test VERSION 0.1.0)
+project(Calculator VERSION 0.1.0)
 
-find_package(Qt5 5.15 REQUIRED
-    COMPONENTS Gui Widgets)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-file(GLOB PROJECT_SOURCES
-        "${PROJECT_SOURCE_DIR}/src/*.h"
-        "${PROJECT_SOURCE_DIR}/src/*.hpp"
-        "${PROJECT_SOURCE_DIR}/src/*.cpp"
-        "${PROJECT_SOURCE_DIR}/src/*.c"
-        "${PROJECT_SOURCE_DIR}/src/*.ui"
-        )
-
-add_executable(Test WIN32 ${PROJECT_SOURCES})
-TARGET_LINK_LIBRARIES(Test
-    Qt5::Widgets Qt5::Core
-)
+add_subdirectory(./src/grammar/)
+add_subdirectory(./src/)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

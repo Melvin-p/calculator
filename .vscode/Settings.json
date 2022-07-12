@@ -1,0 +1,44 @@
+{
+    "cmake.configureArgs": [
+        "--graphviz=${workspaceFolder}/build/${buildType}/target_graph.dot",
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "${env:vcpkg}\\scripts\\buildsystems\\vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows",
+        "MSVC_RUNTIME_DYNAMIC": "ON"
+    },
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "algorithm": "cpp",
+        "xlocmon": "cpp",
+        "xutility": "cpp"
+    },
+    "cmake.preferredGenerators": [
+        "Ninja",
+        "Unix Makefiles",
+    ],
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.experimentalFeatures": "Disabled",
+    "C_Cpp.formatting": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "clangd.semanticHighlighting": true,
+    "clangd.arguments": [
+        "-j=4",
+        "--all-scopes-completion",
+        "--background-index",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--suggest-missing-includes",
+        "--clang-tidy",
+        "--clang-tidy-checks=boost-*,bugprone-*,cert-*,cppcoreguidelines-*,clang-analyzer-*,misc-*,modernize-*,performance-*,portability-*,readability-*,-readability-braces-around-statements",
+    ],
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.inlineValues": true,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+}

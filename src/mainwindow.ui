@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Calculator</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -28,6 +31,9 @@
         <property name="text">
          <string>8</string>
         </property>
+        <property name="shortcut">
+         <string>8</string>
+        </property>
        </widget>
       </item>
       <item row="3" column="3">
@@ -39,6 +45,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>-</string>
+        </property>
+        <property name="shortcut">
          <string>-</string>
         </property>
        </widget>
@@ -54,6 +63,9 @@
         <property name="text">
          <string>5</string>
         </property>
+        <property name="shortcut">
+         <string>5</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="2">
@@ -65,6 +77,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>2</string>
+        </property>
+        <property name="shortcut">
          <string>2</string>
         </property>
        </widget>
@@ -80,6 +95,9 @@
         <property name="text">
          <string>3</string>
         </property>
+        <property name="shortcut">
+         <string>3</string>
+        </property>
        </widget>
       </item>
       <item row="4" column="2">
@@ -91,6 +109,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>.</string>
+        </property>
+        <property name="shortcut">
          <string>.</string>
         </property>
        </widget>
@@ -106,6 +127,9 @@
         <property name="text">
          <string>6</string>
         </property>
+        <property name="shortcut">
+         <string>6</string>
+        </property>
        </widget>
       </item>
       <item row="4" column="3">
@@ -117,6 +141,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>^</string>
+        </property>
+        <property name="shortcut">
          <string>^</string>
         </property>
        </widget>
@@ -151,6 +178,9 @@
         <property name="text">
          <string>9</string>
         </property>
+        <property name="shortcut">
+         <string>9</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
@@ -162,6 +192,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>1</string>
+        </property>
+        <property name="shortcut">
          <string>1</string>
         </property>
        </widget>
@@ -177,6 +210,9 @@
         <property name="text">
          <string>*</string>
         </property>
+        <property name="shortcut">
+         <string>*</string>
+        </property>
        </widget>
       </item>
       <item row="4" column="0">
@@ -188,6 +224,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>/</string>
+        </property>
+        <property name="shortcut">
          <string>/</string>
         </property>
        </widget>
@@ -203,6 +242,9 @@
         <property name="text">
          <string>7</string>
         </property>
+        <property name="shortcut">
+         <string>7</string>
+        </property>
        </widget>
       </item>
       <item row="2" column="0">
@@ -214,6 +256,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>4</string>
+        </property>
+        <property name="shortcut">
          <string>4</string>
         </property>
        </widget>
@@ -229,6 +274,9 @@
         <property name="text">
          <string>+</string>
         </property>
+        <property name="shortcut">
+         <string>+</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">
@@ -240,6 +288,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>0</string>
+        </property>
+        <property name="shortcut">
          <string>0</string>
         </property>
        </widget>
@@ -268,6 +319,9 @@
         <property name="text">
          <string>&lt;-X</string>
         </property>
+        <property name="shortcut">
+         <string>Backspace</string>
+        </property>
        </widget>
       </item>
       <item row="5" column="2" colspan="2">
@@ -281,6 +335,9 @@
         <property name="text">
          <string>)</string>
         </property>
+        <property name="shortcut">
+         <string>)</string>
+        </property>
        </widget>
       </item>
       <item row="5" column="0" colspan="2">
@@ -292,6 +349,9 @@
          </sizepolicy>
         </property>
         <property name="text">
+         <string>(</string>
+        </property>
+        <property name="shortcut">
          <string>(</string>
         </property>
        </widget>
@@ -324,11 +384,35 @@
    </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>About</string>
+     <string>Help</string>
     </property>
+    <addaction name="actionAbout"/>
    </widget>
+   <widget class="QMenu" name="menuTheme">
+    <property name="title">
+     <string>Theme</string>
+    </property>
+    <addaction name="actionDark"/>
+    <addaction name="actionBlue"/>
+   </widget>
+   <addaction name="menuTheme"/>
    <addaction name="menuAbout"/>
   </widget>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>Dark</string>
+   </property>
+  </action>
+  <action name="actionBlue">
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>buttonZero</tabstop>

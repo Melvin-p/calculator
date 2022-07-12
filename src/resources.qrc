@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/stylesheets">
+        <file>Darkeum.qss</file>
+        <file>Irrorater.qss</file>
+    </qresource>
+</RCC>
